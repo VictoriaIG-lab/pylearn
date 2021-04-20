@@ -36,20 +36,50 @@
             transform:skew(8deg) rotate(3deg);
 }
 
+// flobal fro the App:
+
+html {
+  --scrollbarBG: rgba(255,255,255, 1);
+  --thumbBG: #90A4AE;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+::-webkit-scrollbar-thumb {
+   height: 50px;
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
 // the #ui columns styling:
 
 .col#ui {
+    border-right: .5px solid rgba(0,0,0,.3);
     #problem {
-        height: 50vh;
-        background-color: blanchedalmond;
+//         background-color: blanchedalmond;
+
+    border-bottom: .5px solid rgba(0,0,0,.3);
     }
     #hints {
-        height: 50vh;
-        background-color: salmon;
+//         height: 50vh;
+//         background-color: salmon;
+    }
+    .row {
+        height: 46vh;
+        padding: 10px;
     }
 }
 
 .CodePage {
+    max-height: 100vh;
     > .row {
         > .col {
             display: inline-block;

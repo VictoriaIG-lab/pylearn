@@ -2,7 +2,7 @@ import './Hints.scss'
 
 export default function Hints(props) {
 
-   const {hints} = props;
+    const {hints, className} = props;
     console.log(hints);
 
     const hintDivs = hints.map( // TODO sort by index
@@ -21,7 +21,7 @@ export default function Hints(props) {
         })
 
     return (
-         <div id="hints">
+         <div id="hints" className={'' + className}>
             <h3> Hints </h3>
             {
                 hintDivs

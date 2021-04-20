@@ -3,7 +3,7 @@ import './Problem.scss'
 export default function Problem(props) {
 
 //    const {data: data2, id: propsId} = props;
-    const {data} = props;
+    const {data, className} = props;
     console.log(data);
 
     const testDivs = data.testCases.map(
@@ -19,7 +19,7 @@ export default function Problem(props) {
         })
 
     return (
-         <div id="problem">
+         <div id="problem" className={'' + className} >
             <h2> {data.name} </h2>
             <div> Description: {data.description} </div>
             {
