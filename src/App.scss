@@ -1,0 +1,91 @@
+.box {
+    background:#FFF;
+}
+.effect7{
+}
+.effect7
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(75, 75, 75, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(75, 75, 75, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(75, 75, 75, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+  content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(75,75,75,0.5);
+    -moz-box-shadow:0 0 20px rgba(75,75,75,0.5);
+    box-shadow:0 0 20px rgba(75,75,75,0.5);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect7:after
+{
+  right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
+}
+
+// the #ui columns styling:
+
+.col#ui {
+    #problem {
+        height: 50vh;
+        background-color: blanchedalmond;
+    }
+    #hints {
+        height: 50vh;
+        background-color: salmon;
+    }
+}
+
+.CodePage {
+    > .row {
+        > .col {
+            display: inline-block;
+        }
+        > .col#ui {
+            width: 36vw;
+            height: 100vh;
+        }
+        > .col#code {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+            top: 0;
+            float: right;
+
+            #code-edit {
+
+                border-radius: 25px;
+                .codeflask {
+                    border-radius: 25px;
+                }
+
+                width: calc(60vw * .9);
+                height: calc(100vh*.9);
+
+                position: relative;
+
+                .codeflask__textarea {
+                    margin-top: 40px;
+                }
+            }
+            width: 60vw;
+            height: 100vh;
+        }
+    }
+}
